@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+ #landing {
+  background-image: url("/noodles.jpeg");
+  background-size: cover;
+  background-position-y: center;
+ }
+
+ .show {
+  transform: translateX(0);
+  transition: all 200ms ease-in-out;
+  opacity: 1;
+ }
+
+ .hide {
+  transform: translateX(105%);
+  transition: all 100ms ease-in-out;
+  opacity: 0;
+ }
+}
+
+@layer base {
+
+ *,
+ *::before,
+ **:active {
+  padding: 0;
+  margin: 0;
+ }
+
+ body {
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  min-width: 100vw;
+ }
+
+ a {
+
+  &:hover,
+  &:focus {
+   color: theme("colors.red")
+  }
+ }
+}
